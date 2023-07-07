@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { useDispatch, useSelector } from 'react-redux'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from 'react-bootstrap';
+import ContactFrom from './Component/ContactFrom';
+import ContactList from './Component/ContactList';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1 className='title'>연락처</h1>
+      <Container>
+        <Row>
+          <Col>
+            <ContactFrom />    
+          </Col>
+          <Col>
+            <ContactList />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
